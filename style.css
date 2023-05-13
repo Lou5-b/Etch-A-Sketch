@@ -1,3 +1,10 @@
+#btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
 #group {
     display: flex;
     justify-content: center;

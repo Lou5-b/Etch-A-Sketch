@@ -20,6 +20,42 @@ while (i < 16) {
 
     i++
 }
+//Creates default tile area
+
+
+const button = document.querySelector('#btn');
+button.addEventListener('click', function (e) {
+    let dimensionsamount = prompt("Dimensions?")
+    let dimensions = parseInt(dimensionsamount, 10)
+
+    const divisions = document.querySelectorAll('#group')
+    divisions.forEach((division) => {
+        let divs = document.getElementById("group");
+        divs.parentNode.removeChild(divs)
+    })
+
+    let i = 0
+    while (i < dimensions) {
+        const newgroup = document.createElement('div');
+        newgroup.setAttribute('id', 'group');
+        
+        main.appendChild(newgroup)
+
+        let n = 0
+
+        while (n < dimensions) {
+            const section = document.createElement('div');
+            section.classList.add('section');
+        
+            newgroup.appendChild(section)
+            n++
+        }
+        i++
+    }
+
+})
+//Creates new tile areas
+
 
 const sections = document.querySelectorAll('.section');
 
@@ -28,5 +64,4 @@ sections.forEach((section) => {
         section.style.backgroundColor = "black";
     });
 });
-
-
+//Draws
