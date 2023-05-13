@@ -33,6 +33,7 @@ button.addEventListener('click', function (e) {
         let divs = document.getElementById("group");
         divs.parentNode.removeChild(divs)
     })
+    //Deletes past grid
 
     let i = 0
     while (i < dimensions) {
@@ -52,6 +53,15 @@ button.addEventListener('click', function (e) {
         }
         i++
     }
+
+    const sections = document.querySelectorAll('.section');
+
+    sections.forEach((section) => {
+    section.addEventListener('mouseenter', function (e) {
+        section.style.backgroundColor = "black";
+    });
+    
+});
 
 })
 //Creates new tile areas
