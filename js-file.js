@@ -25,7 +25,7 @@ const sections = document.querySelectorAll('.section');
 
 sections.forEach((section) => {
     section.addEventListener('mouseenter', function (e) {
-        console.log('I have entered section')
+        section.style.backgroundColor = "black";
     });
 });
 
